@@ -31,3 +31,14 @@ The dataset used is **CICIDS2017**, a network traffic dataset containing both be
 
 ## Project Structure
 
+network_traffic_detector/ │ ├── data/ │ └── dataset_consolidado.csv # CSV file containing the dataset ├── detector/ │ ├── preprocess.py # Preprocessing script │ ├── modelo.py # Model training and evaluation │ └── random_forest_model.pkl # Trained model file ├── notebooks/ │ └── exploratory_data_analysis.ipynb # Exploratory data analysis notebook └── README.md # Project documentation
+
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/antonioburgos91/detector_trafico_red.git
+
+
