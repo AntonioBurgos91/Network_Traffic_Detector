@@ -39,6 +39,6 @@ detector_trafico_red/ │ ├── data/ │ └── dataset_consolidado.csv 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/antonioburgos91/detector_trafico_red.git
+git clone https://github.com/antonioburgos91/Network_Traffic_Detector.git
 
 
