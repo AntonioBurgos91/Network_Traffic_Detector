@@ -1,44 +1,50 @@
-# Network Traffic Detector using Machine Learning
+# 🌐 Network Traffic Detector | Análisis Avanzado de Tráfico de Red
 
-This project aims to develop a machine learning model for detecting malicious network traffic using the **CICIDS2017** dataset. The model is trained to detect various types of attacks, such as DDoS, DoS, Port Scan, and others, with high accuracy.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-yellowgreen)]()
 
-## Project Overview
+**Repositorio:** [github.com/AntonioBurgos91/Network_Traffic_Detector](https://github.com/AntonioBurgos91/Network_Traffic_Detector)
 
-The project involves preprocessing network traffic data and training a **Random Forest** classifier to detect anomalies in network traffic. The model has been trained and evaluated on multiple attack types and benign traffic.
+## 🚀 Descripción del Proyecto
+Sistema de análisis de tráfico de red para detección de patrones sospechosos y clasificación de tráfico mediante técnicas de machine learning. Desarrollado como herramienta para:
+- Monitoreo en tiempo real
+- Detección de anomalías
+- Clasificación de protocolos
+- Identificación de posibles amenazas de seguridad
 
-### Key Features:
-- Data preprocessing: handling missing and infinite values.
-- Classification model using **Random Forest**.
-- Performance evaluation with metrics such as accuracy, precision, recall, and f1-score.
-- Support for multiple attack types.
+## 🔍 Características Clave
+- **Análisis Multicapa:** Inspección desde capa 2 hasta capa 7 del modelo OSI
+- **Motor de ML Integrado:** Modelos preentrenados para detección de intrusiones
+- **Visualización Interactiva:** Dashboard con métricas en tiempo real
+- **Soporte para PCAP:** Procesamiento de capturas de tráfico profesional
 
-## Results
+## 📊 Dataset (Consideraciones Especiales)
+**Nombre:** CIC-IDS-2017 Dataset (Custom Extended Version)  
+**Tamaño Total:** ~48 GB  
+**Contenido:**
+- Capturas completas de tráfico de red (`*.peap`) 
+- Checksums de verificación (`*.md5`)
+- Tráfico etiquetado (ataques DDoS, Botnets, inyecciones SQL)
 
-The model achieved an accuracy of **99.88%** on the test set, with strong performance in detecting attacks such as **DDoS** and **DoS Hulk**.
+⚠️ **Nota importante:** Debido a las políticas de GitHub sobre archivos grandes (>100MB), los archivos originales del dataset no están incluidos en este repositorio. [Consulta la sección de descarga del dataset](#-acceso-al-dataset) para obtener instrucciones de acceso.
 
-| Metric    | Value  |
-|-----------|--------|
-| Accuracy  | 99.88% |
-| Precision | 99.9%  |
-| Recall    | 99.9%  |
-| f1-Score  | 99.9%  |
+## 🛠️ Tecnologías Utilizadas
+| Categoría          | Herramientas                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **Lenguajes**       | Python 3.8, SQL                                                             |
+| **ML Framework**    | TensorFlow 2.8, Scikit-learn 1.0                                             |
+| **Procesamiento**   | Apache Spark, Pandas, NumPy                                                  |
+| **Visualización**   | Grafana, Plotly                                                              |
+| **Herramientas**    | Wireshark, Zeek (Bro IDS), Elastic Stack                                    |
 
-## Dataset
-
-The dataset used is **CICIDS2017**, a network traffic dataset containing both benign and malicious traffic.
-
-- **Dataset link**: [CICIDS2017 Dataset](https://www.unb.ca/cic/datasets/ids-2017.html)
-
-## Project Structure
-
-detector_trafico_red/ │ ├── data/ │ └── dataset_consolidado.csv # CSV file containing the dataset ├── detector/ │ ├── preprocess.py # Preprocessing script │ ├── modelo.py # Model training and evaluation │ └── random_forest_model.pkl # Trained model file ├── notebooks/ │ └── exploratory_data_analysis.ipynb # Exploratory data analysis notebook └── README.md # Project documentation
-
-
-## Installation
-
-1. Clone the repository:
-
+## 📥 Instalación
 ```bash
-git clone https://github.com/antonioburgos91/Network_Traffic_Detector.git
+# Clonar repositorio
+git clone https://github.com/AntonioBurgos91/Network_Traffic_Detector.git
 
+# Instalar dependencias
+pip install -r requirements.txt
 
+# Configurar entorno (ver docs/setup_guide.md)
+python setup.py --configure
