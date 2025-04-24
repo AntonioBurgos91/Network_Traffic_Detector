@@ -1,0 +1,37 @@
+# .github/workflows/ci.yml
+name: CI Pipeline
+
+# Dispara en cada push o pull request contra main  
+on:  
+  push:  
+    branches: [ main ]          # :contentReference[oaicite:6]{index=6}  
+  pull_request:  
+    branches: [ main ]          # :contentReference[oaicite:7]{index=7}  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest      # Ejecuta en Ubuntu más reciente :contentReference[oaicite:8]{index=8}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3    # Clona el repositorio :contentReference[oaicite:9]{index=9}
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4  # Configura Python :contentReference[oaicite:10]{index=10}
+        with:
+          python-version: '3.10'
+
+      - name: Upgrade pip and install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel   # Actualiza pip :contentReference[oaicite:11]{index=11}
+          pip install -r requirements.txt                       # Instala paquetes :contentReference[oaicite:12]{index=12}
+
+      - name: Install dev dependencies
+        run: |
+          pip install pytest flake8                              # Para pruebas y linting :contentReference[oaicite:13]{index=13}
+
+      - name: Lint with flake8
+        run: flake8 .                                          # Verifica estilo de código :contentReference[oaicite:14]{index=14}
+
+      - name: Run tests with pytest
+        run: pytest --maxfail=1 --disable-warnings -q         # Ejecuta pruebas :contentReference[oaicite:15]{index=15}
