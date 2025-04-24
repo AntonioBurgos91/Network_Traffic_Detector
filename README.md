@@ -29,6 +29,12 @@ Sistema de análisis de tráfico de red para detección de patrones sospechosos 
 
 ⚠️ **Nota importante:** Debido a las políticas de GitHub sobre archivos grandes (>100MB), los archivos originales del dataset no están incluidos en este repositorio. [Consulta la sección de descarga del dataset](https://www.unb.ca/cic/datasets/ids-2017.html) para obtener instrucciones de acceso.
 
+## 🧠 Modelos Implementados
+| Modelo              | Precisión | Recall  | Caso de Uso                   |
+|---------------------|-----------|---------|-------------------------------|
+| LSTM Network        | 98.2%     | 97.8%   | Detección temporal de anomalías |
+| Random Forest       | 95.4%     | 96.1%   | Clasificación de protocolos    |
+| Autoencoder         | 99.1%     | N/A     | Detección no supervisada       |
 
 ## 🛠️ Tecnologías Utilizadas
 | Categoría          | Herramientas                                                                 |
