@@ -27,7 +27,8 @@ Sistema de análisis de tráfico de red para detección de patrones sospechosos 
 - Checksums de verificación (`*.md5`)
 - Tráfico etiquetado (ataques DDoS, Botnets, inyecciones SQL)
 
-⚠️ **Nota importante:** Debido a las políticas de GitHub sobre archivos grandes (>100MB), los archivos originales del dataset no están incluidos en este repositorio. [Consulta la sección de descarga del dataset](#-acceso-al-dataset) para obtener instrucciones de acceso.
+⚠️ **Nota importante:** Debido a las políticas de GitHub sobre archivos grandes (>100MB), los archivos originales del dataset no están incluidos en este repositorio. [Consulta la sección de descarga del dataset](https://www.unb.ca/cic/datasets/ids-2017.html) para obtener instrucciones de acceso.
+
 
 ## 🛠️ Tecnologías Utilizadas
 | Categoría          | Herramientas                                                                 |
